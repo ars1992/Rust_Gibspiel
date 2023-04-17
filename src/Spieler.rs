@@ -16,6 +16,7 @@ pub mod Spieler{
 
         pub fn steine_setzen(&mut self) -> i32{
             println!("Am zug: Spieler {}", self.get_name());
+            println!("Ihre Wahl (1-10): ");
             let mut eingabe = String::new();
             io::stdin().read_line(&mut eingabe).expect("Error");
             loop {

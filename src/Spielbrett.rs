@@ -13,13 +13,14 @@ pub mod spiel{
 
     impl Spielbrett{
         pub fn mache_zug(&mut self, steine: i32 ) -> bool{
+            if self.aktuelle_anzahl_steine + steine > 100{
+                println!("Zu hoch");
+                return false;
+            }
+
             if steine >= 1 && steine <= 10 {
                 self.aktuelle_anzahl_steine += steine;
                 return true;
-            }
-
-            if self.aktuelle_anzahl_steine + steine == 100{
-                return false;
             }
 
             println!("Fehlerhafte Eingabe");
