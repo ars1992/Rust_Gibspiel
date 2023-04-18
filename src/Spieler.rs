@@ -1,4 +1,4 @@
-use std::io;
+
 
 pub mod Spieler{
     use std::io;
@@ -26,8 +26,6 @@ pub mod Spieler{
                 };
                 return eingabe_num;
             }
-
-
         }
     }
 }
